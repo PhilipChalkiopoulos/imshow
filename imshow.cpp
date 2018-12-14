@@ -30,10 +30,6 @@ int main(){
 		return -1;
 	}
 
-	imshow( "Display window", image );                   // Show our image inside it.
-
-
-
 	int channels = image.channels();
 	int nRows = image.rows;
 	int nCols = image.cols * channels;
@@ -53,7 +49,5 @@ int main(){
 			fb_drawPixel(&fb,y,x+350,b,g,r); //if we want offset of the image x+ y+
 		}
 	}
-
 	return 0;
-
 }
