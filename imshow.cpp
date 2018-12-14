@@ -22,7 +22,7 @@ int main(){
 	dev_fb fb;
 	fb_init(&fb);
 
-	image = imread("upatras.png", CV_LOAD_IMAGE_COLOR);   // Read the file
+	image = imread("upatras.bmp", CV_LOAD_IMAGE_COLOR);   // Read the file
 
 	if(! image.data )                              // Check for invalid input
 	{
@@ -46,7 +46,7 @@ int main(){
 			g = image.at<char>(i,j+1);
 			b = image.at<char>(i,j+2);
 			//printf("[%d][%d],%d,%d,%d\n",y,x,point,point+1,point+2);
-			fb_drawPixel(&fb,y,x+350,b,g,r); //if we want offset of the image x+ y+
+			fb_drawPixel(&fb,y,x,b,g,r); //if we want offset of the image x+ y+
 		}
 	}
 	return 0;
